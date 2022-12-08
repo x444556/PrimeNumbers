@@ -74,7 +74,7 @@ void* findPrimesThread(struct primeGenTaskInfo* info){
     uint64_t startWriteTime = GetTimeUs64();
 
     char fname[64];
-    sprintf(fname, "primes_%I64i-%I64i.txt", info->start, info->start + info->count);
+    sprintf(fname, "primes/primes_%I64i-%I64i.txt", info->start, info->start + info->count);
     FILE* file = fopen(fname, "w");
     for(int i=0; i<c; i++){
         fprintf(file, "%I64i\n", info->storage[i]);
