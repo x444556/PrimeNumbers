@@ -150,14 +150,4 @@ int main(){
     printf("Finished in %I64i min! Found %I64i prime numbers.\nBiggest Prime number is %I64i\n", (GetTimeMs64() - startTimeMs) / 1000 / 60, totalPrimesFound, biggestPrime);
 
     return 0;
-
-    /*uint64_t start = 0x0002;
-    uint64_t end   = 0x3FFFFF;//start + 200000;
-    printf("looking for primes between %I64i and %I64i (%I64i candidates)\n", start, end, (end - start));
-    FILE* file = fopen("./primes.txt", "w");
-    uint64_t ms_start = GetTimeUs64();
-    uint64_t total = findPrimes(start, end, file);
-    uint64_t ms_end = GetTimeUs64();
-    fclose(file);
-    printf("Found %I64i primes in %I64i us!\n", total, (ms_end - ms_start));*/
 }
